@@ -1,0 +1,1 @@
+Basicamente, apenas a homepage e o layout inicial serão desenvolvidos. Ao longo do semestre, será criado um site completo com sistemas de APIs para agendamento, avaliação de restaurante e mapa também. Fora diversas outras abas dedicadas para cada restaurante - evento e destino, separadas por categorias.
