@@ -1,30 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="fechamentodisplayport.js"></script>
     <link rel="stylesheet" href="styles.css">
+   
+   
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
-
 <body>
 
-    <header class="header">
+    <header >
         <img src="pine-watt-2Hzmz15wGik-unsplash.jpg" alt="Cabeçalho" class="header-image">
+        
+        <!-- Ícone do menu para mobile -->
+        <input type="checkbox" id="menuToggle" style="display: none;">
+        <div class="menu-icon">
+            <label for="menuToggle">
+                <i class="fa fa-bars"></i>
+                <i class="fa fa-times-circle"></i>
+            </label>
+        </div>
         <nav class="menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="restaurantescatalogo.html">Restaurantes</a></li>
-                <li><a href="#">Turismo</a></li>
-                <li><a href="#">Eventos</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Serviços</a></li>
                 <li><a href="#">Contato</a></li>
             </ul>
         </nav>
     </header>
     <div>
 
-        <h1></h1>
+      
     </div>
 
     <section class="features">
@@ -43,12 +52,12 @@
             </div>
         </div>
     </section>
-
+     <main>     
     <section class="content">
         <div class="content-block">
             <img class="restaurantesincriveis" src="restaurantesincriveis.jpg" alt="Content Image">
             <div class="divrestaurantesincriveis">
-                <h2 class="h2restaurantesincriveis">Conheça Restaurantes Incríveis 🍴 </h2>
+                <h2 class="h2restaurantesincriveis"> Conheça Restaurantes Incríveis </h2>
                 <p>Se você é um amante da boa comida e está sempre em busca de novas experiências gastronômicas, está no
                     lugar Perfeito! Nosso Guia Gastronômico<br> foi criado unicamente para quem deseja explorar sabores
                     incríveis, seja em um jantar sofisticado em uma comida de rua irresistível ou até mesmo em<br> algum
@@ -57,7 +66,7 @@
                     consagrados até os novos queridinhos do momento.</p>
                 <p>🍕 Sabores para Todos os Gostos: Opções que vão do tradicional ao moderno, com gastronomia local,
                     internacional, vegana e muito mais.</p>
-                <p> 💰 Opções para Todos os Bolsos: Descubra desde restaurantes premiados até aquele cantinho econômico
+                <p> 💰 Opções para todos os bolsos: Descubra desde restaurantes premiados até aquele cantinho econômico
                     que surpreende no sabor.
 
                 </p>
@@ -72,14 +81,14 @@
                 <h2 class="h2lugaresespeciais">Explore Lugares Especiais 🌍</h2>
 
                 <p>Se você está em busca de aventuras, sabores únicos e lugares inesquecíveis, está no lugar certo!
-                    Nosso Guia Turístico foi criado especialmente<br> para quem deseja conhecer cada detalhe e encanto
-                    da cidade, seja você um morador curioso ou um visitante ávido por experiências autênticas. </p>
+                    Nosso Guia Turístico<br> foi criado especialmente<br> para quem deseja conhecer cada detalhe e encanto
+                    da cidade, seja você um morador curioso<br> ou um visitante ávido por experiências autênticas. </p>
                 <p> 🔍 Exploração Completa: Descubra pontos turísticos icônicos, desde monumentos históricos até
-                    recantos escondidos que poucos conhecem.</p>
+                    recantos escondidos<br> que poucos conhecem.</p>
                 <p>🎉 Eventos e Festas: Fique por dentro dos eventos que movimentam a cidade, de festivais culturais a
-                    shows e feiras gastronômicas.</p>
+                    shows e feiras<br> gastronômicas.</p>
                 <p>🚶 Roteiros Personalizados: Seja para um passeio romântico, uma aventura com amigos ou uma viagem em
-                    família, criamos roteiros sob medida para todos os perfis.</p>
+                    família,<br> criamos roteiros sob medida para todos os perfis.</p>
                 <div class="buttons">
                     <a href="#" class="buttonlugaresincriveis">Descubra seu local</a>
 
@@ -188,7 +197,7 @@
                     <h2>Destinos Únicos</h2>
                     <p>
                         Descubra lugares exóticos e pouco explorados para tornar sua viagem ainda mais especial. Explore
-                        roteiros personalizados e planeje suas próximas aventuras com conforto e segurança.
+                        roteiros personalizados e planeje sua próxima aventura com conforto e segurança.
                     </p>
                     <a href="#" class="read-more">
                         Leia mais <span class="sr-only">sobre Título do Artigo 3</span>
@@ -197,7 +206,7 @@
             </div>
         </article>
     </section>
-
+</main>
     <footer class="footer">
         <div class="logo-container">
             <img class="logosite" src="logosite.webp" alt="">
@@ -206,6 +215,9 @@
         <div class="footer-links">
             <a href="#">Política de Privacidade</a>
             <a href="#">Termos de Serviço</a>
+            <a href="loguin.html">Loguin </a>
+            <a href="Paginadecarregamentos.html">Dados </a>
+
         </div>
     </footer>
 
