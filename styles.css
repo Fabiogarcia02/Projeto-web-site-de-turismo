@@ -1,15 +1,10 @@
 .primeira-secao {
   display: flex;
-  flex-direction: column; /* Empilha os elementos */
-  align-items: center; /* Centraliza horizontalmente */
-  text-align: center; /* Centraliza o texto */
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center; 
 }
-#primeiraimagem {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
-  margin-bottom: 15px; /* Espaço entre a imagem e o botão */
-}
+
 
 #menuToggle {
   display: none;
@@ -38,23 +33,23 @@
   width: 100%;
   height: 45px;
   padding-left: 2.5rem;
-  box-shadow: 0 0 0 1.5px #2b2c37, 0 0 25px -17px #000;
+  box-shadow: 0 0 0 1.5px RGB(47, 48, 61), 0 0 25px -17px black;
   border: 0;
   border-radius: 12px;
   background-color: rgb(43, 2, 63);
   outline: none;
-  color: #0a106a;
+  color: RGB(10, 16, 106);
   transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
   cursor: text;
   z-index: 0;
 }
 
 .input::placeholder {
-  color: #bdbecb;
+  color: RGB(189, 190, 203);
 }
 
 .input:hover {
-  box-shadow: 0 0 0 2.5px #2f303d, 0px 0px 25px -15px #000;
+  box-shadow: 0 0 0 2.5px RGB(47, 48, 61), 0px 0px 25px -15px  black;
 }
 
 .input:active {
@@ -62,20 +57,20 @@
 }
 
 .input:focus {
-  box-shadow: 0 0 0 2.5px #2f303d;
+  box-shadow: 0 0 0 2.5px RGB(47, 48, 61);
 }
 
 .search-icon {
   position: absolute;
   left: 1rem;
-  fill: #bdbecb;
+  fill: RGB(189, 190, 203);
   width: 1rem;
   height: 1rem;
   pointer-events: none;
   z-index: 1;
 }
 
-#espaçamento {
+.espaçamento {
   margin: 20px;
 }
 
@@ -92,23 +87,23 @@
   width: 100%;
   height: 45px;
   padding-left: 2.5rem;
-  box-shadow: 0 0 0 1.5px #2b2c37, 0 0 25px -17px #000;
+  box-shadow: 0 0 0 1.5px RGB(189, 190, 203), 0 0 25px -17px black;
   border: 0;
   border-radius: 12px;
-  background-color: #16171d;
+  background-color: RGB(22, 23, 29);
   outline: none;
-  color: #bdbecb;
+  color: RGB(189, 190, 203);
   transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
   cursor: text;
   z-index: 0;
 }
 
 .input::placeholder {
-  color: #bdbecb;
+  color: RGB(189, 190, 203);
 }
 
 .input:hover {
-  box-shadow: 0 0 0 2.5px #2f303d, 0px 0px 25px -15px #000;
+  box-shadow: 0 0 0 2.5px RGB(47, 48, 61), 0px 0px 25px -15px black;
 }
 
 .input:active {
@@ -116,13 +111,13 @@
 }
 
 .input:focus {
-  box-shadow: 0 0 0 2.5px #2f303d;
+  box-shadow: 0 0 0 2.5px RGB(47, 48, 61);
 }
 
 .search-icon {
   position: absolute;
   left: 1rem;
-  fill: #bdbecb;
+  fill:RGB(189, 190, 203);
   width: 1rem;
   height: 1rem;
   pointer-events: none;
@@ -209,189 +204,191 @@
 }
 
 /* Ajustes para telas pequenas */
+
 @media screen and (max-width: 600px) {
-  /* Ícones do menu */
-  .menu-icon {
-      display: block;
-      color: aliceblue;
-      width: 50px;
-      height: inherit;
-      position: absolute;
-      top: 15px;
-      right: 30px;
-      line-height: 60px;
-      z-index: 999;
-  }
-
-  .menu-icon i {
-      font-size: 1.7em;
-  }
-
-  .menu-icon .fa-times-circle {
-      display: none; 
-      z-index: -1;
-  }
-
-  /* Mostrar/ocultar ícones dependendo do estado do checkbox */
-  #menuToggle:not(:checked) + .menu-icon .fa-bars {
-      display: inline;
-  }
-
-  #menuToggle:checked + .menu-icon .fa-bars {
-      display: none;
-  }
-
-  #menuToggle:checked + .menu-icon .fa-times-circle {
-      display: inline;
-      
-  }
-    
-  /* Esconder o menu por padrão */
-  .menu {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.9);
-      padding: 50px 20px;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-  }
-
-  /* Mostrar o menu quando marcado */
-  #menuToggle:checked ~ .menu {
-      display: flex;
-  }
-
-  .menu ul {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      align-items: center;
-  }
-
-  .menu li a {
-      font-size: 22px;
-      padding: 12px 20px;
-      color: white;
-      text-decoration: none;
-  }
-
-  /* Ocultar a logo no modo responsivo */
-  .logosite {
-      visibility: hidden !important;
-  }
-}
-@media screen and (max-width: 600px) {  
-  /* Esconder o menu por padrão */
+  /* Organização da seção principal em formato de card */
   .primeira-secao {
-    flex-direction: column; /* Mantém os elementos empilhados */
-    
-    article {
-      container: card/inline-size;
-    }
-    .feature-buttons{
-     display: flex;
-    gap: 10px;
-    row-gap: 10px;
-    column-gap: 10px;
-    justify-content: center;
-  }
- 
-    .article-body p {
-      display: none;
-    }
-  }
-  #primeiraimagem {
-    width: 90%; /* Ajusta o tamanho para telas menores */
-  }
-  .buttonabaixocabeçalho {
-    width: auto;
-    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
+  .primeira-secao article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+  }
+
+  /* Ajuste na imagem */
+
+
+  /* Melhorando a disposição do texto e botões */
+  .feature-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buttonabaixocabecalho {
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+
+  /* Menu responsivo */
   .menu {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     position: fixed;
-    flex-wrap: wrap;
-    justify-content: center;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 0%;
-    background: rgba(0, 0, 0, 0.7);
-    padding-bottom: 150px;
- 
-    -webkit-transition: background-color 0.3s;
-    -moz-transition: background-color 0.3s;
-    
-    -o-transition: background-color 0.3s;
-    transition: height 0.3s;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
   }
 
   .menu ul {
     display: flex;
-    flex-direction: column; 
-    gap: 10px;
+    flex-direction: column;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
   }
 
   .menu li a {
-    font-size: 18px;  
-    padding: 12px 20px; 
+    font-size: 20px;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
   }
-.logosite{
-  visibility: hidden !important;
-}
- 
-  /* Estilizando os ícones */
-.menu-icon {
+
+  .menu li a:hover {
+    color: RGB(28, 61, 6);
+  }
+
+  .logosite {
+    display: none;
+  }
+
+  /* Ícone do menu */
+  .menu-icon {
     display: block;
-    color: aliceblue;
-    width: 50px;
-    height: inherit;
     position: absolute;
     top: 15px;
-    right: 30px;
-    line-height: 60px;
-    z-index: 999;
-}
-
-  .menu-icon i {
-    font-size: 1.7em;
+    right: 20px;
+    font-size: 2em;
+    color: white;
+    z-index: 1000;
+    cursor: pointer;
   }
 
-  .menu-icon .fa-times-circle {
-    display: none; /* Oculto por padrão */
-}
+  /* Checkbox para ativar o menu */
+  #menuToggle {
+    display: none;
+  }
 
+  #menuToggle:checked ~ .menu {
+    transform: translateY(0);
+  }
 
-#menuToggle:checked + .menu-icon .fa-bars {
-  display: none;
-}
+  /* Adicionando botão de fechar dentro do menu */
+  .menu-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+  }
 
-#menuToggle:checked + .menu-icon .fa-times-circle {
-  display: inline;
-}
+  #menuToggle:checked ~ .menu .menu-close {
+    display: block;
+  }
 
-.menu {
-    display: none; /* Oculta o menu por padrão */
-}
-#menuToggle{
-  display: block;
-}
-#menuToggle:checked ~ .menu {
-    display: block; /* Exibe o menu quando o checkbox está marcado */
-}
-.feature-buttons{ 
-  display: flex    !important; 
-    gap: 10px !important;
-      row-gap: 10px !important;      
-    column-gap: 10px !important;
-    justify-content: center !important;
-}
+  /* Layout para as seções de conteúdo */
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  /* Ajustes na estrutura de blocos de conteúdo */
+  .content-block {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content-block.reverse {
+    flex-direction: column;
+        text-align: center;
+     
+   
+  }
+
+  .content-block img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    display:none
+    
+  }
+
+  .article-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .article-body {
+    padding: 15px;
+  }
+
+  .articles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .articles article {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .articles img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+  }
 }
 
 
@@ -415,7 +412,7 @@
 
 .buttonabaixocabeçalho {
   padding: 10px 20px;
-  background: #07470a;
+  background: RGB(7, 71, 10);
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -460,7 +457,7 @@
   align-items: center;
   text-align: center;
   padding: 10px;
-  border: 2px solid #07470a;
+  border: 2px solid RGB(7, 71, 10);
   border-radius: 10px;
   background-color: white;
 }
@@ -513,7 +510,7 @@ margin: 10px;
   padding: 10px 20px;
   border: 2px solid rgb(43, 2, 63);
   border-radius: 5px;
-  background-color: #07470a;
+  background-color: RGB(7, 71, 10);
 }
 
 .buttonrestaurantesincriveis {
@@ -531,10 +528,7 @@ margin: 10px;
 }
 
 
-.divlugaresincriveis {
-  text-align: center;
-  margin-top: 10px ;
-}
+
 
 .divrestaurantesincriveis {
   text-align: center;
@@ -561,7 +555,7 @@ margin: 10px;
   
   /* Empurrar conteúdo para a direita */
   align-items: center;
-  background-color: #ffffff;
+  background-color: RGB(255, 255, 255);
   padding: 1%;
 }
 
@@ -572,7 +566,7 @@ margin: 10px;
   justify-content: flex-end;
   /* Empurrar conteúdo para a direita */
   align-items: center;
-  background-color: #f6f4f4;
+  background-color:RGB(246, 244, 244);
   padding: 1%;
 }
 
@@ -586,7 +580,7 @@ margin: 10px;
 
 .blog-card {
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid RGB(204, 204, 204);
   border-radius: 10px;
 }
 
@@ -615,7 +609,7 @@ footer {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  background: #16171d;
+  background:RGB(22, 23, 29);
   border-top: 1px solid black;
   margin-top: 100px;
   width: 100%;
@@ -659,7 +653,7 @@ article {
   position: relative;
   border-radius: 16px;
   box-shadow: none;
-  background-color: #f6f4f4;
+  background-color:RGB(246, 244, 244);
   transform-origin: center;
   transition: all 0.4s ease-in-out;
   overflow: hidden;
@@ -671,7 +665,7 @@ article a::after {
   inset-inline: 0;
   cursor: pointer;
   content: "";
-  color: #28666e;
+  color: RGB(40, 102, 110);
 }
 
 /* basic article elements styling */
@@ -707,11 +701,11 @@ article a {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
-  color: #28666e;
+  color: RGB(40, 102, 110);
 }
 
 article a:focus {
-  outline: 1px dotted #28666e;
+  outline: 1px dotted RGB(40, 102, 110);
 }
 
 article a .icon {
@@ -727,7 +721,7 @@ article a .icon {
 /* cards config */
 article:has(:hover, :focus) {
   --img-scale: 1.1;
-  --title-color: #28666e;
+  --title-color: RGB(40, 102, 110);
   --link-icon-translate: 0;
   --link-icon-opacity: 1;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
