@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos na Cidade</title>
+  <link rel="stylesheet" href="eventosmoopçoes.css">
+</head>
+
+<a id="backhome" href="index.html">
+  <img class="logosite" src="logo.png" alt="Voltar para o Home"  />
+</a>
+<div class="wrap">
+  <div class="box">
+    <div class="box-top">
+      <img class="box-image" src="showscard.jpg">
+      <div class="title-flex">
+        <h3 class="box-title">🎤 Shows ao Vivo</h3>
+        <p class="user-follow-info">🏙️ Belo - Horizonte</p>
+      </div>
+      <p class="description">Momentos intensos de conexão entre artista e público. Os shows ao vivo trazem emoção,
+        energia e música em seu estado mais puro, seja em grandes palcos, eventos ao ar livre ou espaços mais
+        intimistas. Cada apresentação é uma experiência única, onde luzes, vozes e aplausos se misturam criando memórias
+        inesquecíveis. Ideal para quem busca vibração, cultura e a sensação de estar presente em algo especial. Do pop
+        ao samba, do rock à MPB, os palcos se tornam pontos de encontro entre arte e emoção.
+
+      </p>
+    </div>
+    <a href="#" class="button">Conheça os Locais</a>
+  </div>
+  <div class="box">
+    <div class="box-top">
+      <img class="box-image" src="baladascard.jpg">
+      <div class="title-flex">
+        <h3 class="box-title">🕺 Casas Noturnas e Baladas</h3>
+        <p class="user-follow-info">🏙️ Belo - Horizonte</p>
+      </div>
+      <p class="description">Quando a noite cai, a cidade ganha outra energia. As casas noturnas e baladas são o ponto
+        de encontro para quem busca música alta, pista cheia e muita diversão. Com iluminação envolvente e ambientes
+        variados, essas experiências noturnas vão de festas dançantes a encontros descontraídos com os amigos. Ideal
+        para quem quer dançar, socializar e viver intensamente até o amanhecer. Cada noite é uma nova história, um novo
+        ritmo, um novo cenário para se jogar.</p>
+    </div>
+    <a href="#" class="button">Fique por dentro</a>
+  </div>
+  <div class="box">
+    <div class="box-top">
+      <img class="box-image" src="exposiçoescard.jpg" alt="Girl Eating Pizza">
+      <div class="title-flex">
+        <h3 class="box-title">🖼️ Exposições de Arte e Cultura</h3>
+        <p class="user-follow-info">🏙️ Belo - Horizonte</p>
+      </div>
+      <p class="description">As exposições são convites para mergulhar em universos criativos, históricos e sensoriais.
+        De mostras de arte contemporânea a exposições fotográficas e temáticas, esses espaços oferecem uma pausa no
+        cotidiano e provocam novos olhares sobre o mundo. Seja em museus, galerias ou centros culturais alternativos,
+        cada visita é uma experiência única , repleta de estética, reflexão e expressão. Ideal para quem aprecia
+        cultura, gosta de descobrir e valoriza o tempo de contemplação.</p>
+    </div>
+    <a href="#" class="button">Conheça os Destinos</a>
+  </div>
+  <div class="box">
+    <div class="box-top">
+      <img class="box-image" src="eventosarlivrecard.png">
+      <div class="title-flex">
+        <h3 class="box-title">🏞️ Eventos ao Ar Livre</h3>
+        <p class="user-follow-info">🏙️ Belo - Horizonte </p>
+      </div>
+      <p class="description">Perfeitos para quem busca lazer, bem-estar e conexão com a natureza, os eventos ao ar livre
+        oferecem experiências únicas em ambientes abertos e inspiradores. De piqueniques e aulas de yoga em praças, a
+        feiras culturais, trilhas guiadas e sessões de cinema sob as estrelas, essas atividades reúnem pessoas em
+        espaços públicos com uma atmosfera leve e descontraída. São oportunidades ideais para aproveitar o dia, respirar
+        ar puro e vivenciar a cidade de uma forma diferente. </p>
+    </div>
+    <a href="#" class="button">Veja mais</a>
+  </div>
+</div>
+
+
+<script src="app.js"></script>
+<script>
+  let params = new URLSearchParams(location.search)
+  let id = params.get('id')
+  let cidade = cidades.find(c => c.id == id)
+
+  let tela = document.getElementById('tela')
+
+  if (cidade) {
+    tela.innerHTML = `
+        <h1>${cidade.cidade} - ${cidade.estado}</h1>
+        <p><strong>População:</strong> ${cidade.populacao.toLocaleString('pt-BR')} habitantes</p>
+        <img src="imagens/${cidade.cidade.toLowerCase().replaceAll(' ', '')}.jpg" alt="${cidade.cidade}">
+      `
+  } else {
+    tela.innerHTML = `<p><strong>Pagina não encontrada </strong></p>`
+  }
+</script>
+</body>
+
+</html>
+

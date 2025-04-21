@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Os Restaurantes </title>
+  <link rel="stylesheet" href="restaurantes.css">
+</head>
+
+<body>
+
+  <a id="backhome" href="index.html">
+    <img class="logosite" src="logo.png" alt="Voltar para o Home"  />
+  </a>
+  <div class="wrap">
+    <div class="box">
+      <div class="box-top">
+        <img class="box-image" src="cardrestauranteitaliano.jpg">
+        <div class="title-flex">
+          <h3 class="box-title">🍝 Restaurantes Italianos</h3>
+          <p class="user-follow-info">🏙️ Belo - Horizonte</p>
+        </div>
+        <p class="description">Sabores autênticos da Itália em cada detalhe. Os restaurantes italianos oferecem uma
+          verdadeira viagem gastronômica, com massas frescas feitas artesanalmente, pizzas assadas em forno à lenha,
+          risotos cremosos e antepastos irresistíveis. A culinária é marcada pelo uso de ingredientes frescos, molhos
+          encorpados e temperos aromáticos, tudo servido em ambientes acolhedores que remetem às tradicionais
+          trattorias.Perfeito para quem aprecia boa comida em ambientes acolhedores e cheios de charme.
+          italianas. </p>
+      </div>
+      <a href="#" class="button">Conheça os restaurantes</a>
+    </div>
+    <div class="box">
+      <div class="box-top">
+        <img class="box-image" src="japonescard.jpg">
+        <div class="title-flex">
+          <h3 class="box-title">🍣 Restaurantes Japoneses</h3>
+          <p class="user-follow-info">🏙️ Belo - Horizonte</p>
+        </div>
+        <p class="description">Delicadeza, tradição e sabor em perfeita harmonia. Os restaurantes japoneses oferecem uma
+          experiência sensorial única, com pratos cuidadosamente preparados, como sushis, sashimis, temakis e pratos
+          quentes como lámen, udon e yakisoba. A culinária japonesa valoriza a estética, o frescor dos ingredientes e o
+          equilíbrio entre texturas e sabores. Seja em ambientes sofisticados ou mais descontraídos, é a escolha ideal
+          para quem aprecia uma alimentação leve, refinada e cheia de significado cultural.</p>
+      </div>
+      <a href="#" class="button">Conheça os restaurantes</a>
+    </div>
+    <div class="box">
+      <div class="box-top">
+        <img class="box-image" src="refinadoscard.png" alt="Girl Eating Pizza">
+        <div class="title-flex">
+          <h3 class="box-title">🍷 Restaurantes Refinados</h3>
+          <p class="user-follow-info">🏙️ Belo - Horizonte</p>
+        </div>
+        <p class="description">Experiências gastronômicas de alto nível, onde cada prato é pensado nos mínimos detalhes.
+          Os restaurantes refinados oferecem menus elaborados por chefs renomados, com técnicas sofisticadas,
+          apresentação impecável e sabores surpreendentes. O ambiente é elegante, o atendimento é atencioso e o clima
+          convida a momentos especiais, seja para um jantar a dois, uma celebração importante ou simplesmente para quem
+          aprecia o melhor da alta gastronomia. Ideal para quem valoriza qualidade, exclusividade e uma experiência
+          completa à mesa.</p>
+      </div>
+      <a href="#" class="button">Conheça os restaurantes</a>
+    </div>
+    <div class="box">
+      <div class="box-top">
+        <img class="box-image" src="bootecoscard.jpg" alt="Girl Eating Pizza">
+        <div class="title-flex">
+          <h3 class="box-title">🍻 Comida de Boteco</h3>
+          <p class="user-follow-info">🏙️ Belo - Horizonte</p>
+        </div>
+        <p class="description">Mais que lugares para comer e beber, os botecos fazem parte da alma brasileira. São
+          espaços descontraídos e acolhedores, onde a comida ganha o sabor da tradição e da convivialidade. Os petiscos
+          são os grandes protagonistas: torresmo crocante, bolinhos recheados, linguiça na chapa, mandioca frita,
+          pastéis e tantas outras delícias que acompanham perfeitamente uma boa cerveja gelada. Em cada mesa, histórias,
+          risadas e uma culinária simples, mas cheia de identidade e afeto. Perfeito para quem valoriza o encontro, o
+          sabor e o espírito boêmio da cidade.</p>
+      </div>
+      <a href="#" class="button">Conheça os restaurantess</a>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    let params = new URLSearchParams(location.search)
+    let id = params.get('id')
+    let cidade = cidades.find(c => c.id == id)
+
+    let tela = document.getElementById('tela')
+
+    if (cidade) {
+      tela.innerHTML = `
+        <h1>${cidade.cidade} - ${cidade.estado}</h1>
+        <p><strong>População:</strong> ${cidade.populacao.toLocaleString('pt-BR')} habitantes</p>
+        <img src="imagens/${cidade.cidade.toLowerCase().replaceAll(' ', '')}.jpg" alt="${cidade.cidade}">
+      `
+    } else {
+      tela.innerHTML = `<p><strong>Pagina não encontrada </strong></p>`
+    }
+  </script>
+</body>
+<script src="cards.js"></script>
+
+</html>
