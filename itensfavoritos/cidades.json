@@ -1,0 +1,98 @@
+{
+  "grupo1": [
+    {
+      "id": "grupo1",
+      "nome": "Salvador",
+      "imagem": "imgdestaques/salvador.jpg",
+      "descricao": [
+        "Salvador, capital da Bahia, é conhecida por sua rica cultura afro-brasileira, arquitetura colonial e praias paradisíacas.",
+        "A cidade oferece uma mistura única de história, música e gastronomia típica, como o acarajé e moqueca.",
+        "O Pelourinho, centro histórico, é um Patrimônio Mundial da UNESCO, famoso por suas ruas coloridas e festas tradicionais."
+      ],
+      "atracoes": [
+        "Pelourinho",
+        "Elevador Lacerda",
+        "Igreja do Bonfim",
+        "Praia do Porto da Barra"
+      ],
+      "quando_visitar": "O melhor período para visitar é entre setembro e março, quando o clima é mais quente e as festas culturais estão em alta.",
+      "dicas": "Explore a culinária local e aproveite os circuitos de música ao vivo e dança de samba e axé.",
+      "coordenadas": { "lat": -12.9714, "lng": -38.5014 }
+    },
+    {
+      "id": "grupo1",
+      "nome": "Olinda",
+      "imagem": "imgdestaques/olinda.jpg",
+      "descricao": [
+        "Olinda é uma cidade histórica em Pernambuco, famosa por seu carnaval vibrante e centro histórico bem preservado.",
+        "Suas ladeiras e igrejas barrocas atraem turistas que buscam cultura e belas vistas do litoral.",
+        "A cidade combina arte, cultura popular e uma atmosfera festiva o ano todo."
+      ],
+      "atracoes": [
+        "Centro Histórico de Olinda",
+        "Igreja da Sé",
+        "Alto da Sé",
+        "Carnaval de Olinda"
+      ],
+      "quando_visitar": "O carnaval, entre fevereiro e março, é a época mais famosa, mas o clima é agradável durante quase todo o ano.",
+      "dicas": "Não perca as apresentações de maracatu e as festas de rua durante o carnaval.",
+      "coordenadas": { "lat": -7.9995, "lng": -34.8550 }
+    },
+    {
+      "id": "grupo1",
+      "nome": "Ouro Preto",
+      "imagem": "imgdestaques/ouropreto.jpg",
+      "descricao": [
+        "Ouro Preto, em Minas Gerais, é um exemplo brilhante da arquitetura colonial brasileira e da história do ciclo do ouro.",
+        "Suas igrejas barrocas e museus contam a trajetória do Brasil imperial.",
+        "A cidade é Patrimônio Mundial da UNESCO e oferece um charme único com suas ruas de pedra e ladeiras íngremes."
+      ],
+      "atracoes": [
+        "Museu da Inconfidência",
+        "Igreja São Francisco de Assis",
+        "Mina du Veloso",
+        "Praça Tiradentes"
+      ],
+      "quando_visitar": "De maio a setembro, quando o clima está seco, é a melhor época para aproveitar as trilhas e o centro histórico.",
+      "dicas": "Use calçados confortáveis para subir as ladeiras e não deixe de experimentar o famoso pão de queijo mineiro.",
+      "coordenadas": { "lat": -20.3856, "lng": -43.5039 }
+    }
+  ],
+  "grupo2": [
+    {
+      "id": "grupo2",
+      "nome": "Belo Horizonte",
+      "imagem": "imgdestaques/bh.webp",
+      "descricao": [
+        "Belo Horizonte é a capital de Minas Gerais, famosa por sua arquitetura modernista, clima agradável e rica vida cultural.",
+        "A cidade combina áreas urbanas vibrantes com muitos parques e espaços verdes, além de ser um polo gastronômico conhecido pelo tradicional 'pão de queijo' e a culinária mineira."
+      ],
+      "atracoes": [
+        "Praça da Liberdade",
+        "Parque das Mangabeiras",
+        "Mercado Central",
+        "Conjunto Arquitetônico da Pampulha"
+      ],
+      "quando_visitar": "Entre abril e setembro, o clima é mais seco e ameno, ideal para passeios ao ar livre.",
+      "dicas": "Não deixe de provar a culinária local e visitar os bares tradicionais para conhecer a cultura mineira.",
+      "coordenadas": { "lat": -19.9167, "lng": -43.9345 }
+    },
+    {
+      "id": "grupo2",
+      "nome": "São Paulo",
+      "imagem": "imgdestaques/saopaulo.jpg",
+      "descricao": [
+        "São Paulo é a maior metrópole do Brasil, um verdadeiro polo cultural, gastronômico e de negócios. É perfeita para quem busca diversidade e agitação.",
+        "De museus a vida noturna vibrante, São Paulo oferece programação intensa para todos os estilos. Não deixe de experimentar a pizza paulistana e caminhar pela Avenida Paulista."
+      ],
+      "atracoes": [
+        "Museu de Arte de São Paulo (MASP)",
+        "Parque Ibirapuera",
+        "Mercadão Municipal"
+      ],
+      "quando_visitar": "São Paulo é vibrante o ano todo. Entre março e maio, o clima é mais ameno.",
+      "dicas": "Use transporte público e aproveite a diversidade gastronômica que a cidade oferece.",
+      "coordenadas": { "lat": -23.5505, "lng": -46.6333 }
+    }
+  ]
+}

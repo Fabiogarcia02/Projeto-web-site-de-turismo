@@ -146,7 +146,7 @@
   left: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  padding: 15px 0;
+
   text-align: center;
   z-index: 1000;
   box-shadow: 0 4px 20px wheat
@@ -981,7 +981,7 @@ a:hover {
 }
 
 .content .title {
-  font-size: 100px;
+  font-size: 60px;
   text-transform: uppercase;
   color: wheat;
   font-weight: bold;
@@ -992,7 +992,7 @@ a:hover {
 }
 
 .content .name {
-  font-size: 100px;
+  font-size: 40px;
   text-transform: uppercase;
   font-weight: bold;
   line-height: 1;
@@ -1141,7 +1141,7 @@ a:hover {
 
   .content .title,
   .content .name {
-    font-size: 70px;
+    font-size: 60px;
   }
 
   .content .des {
