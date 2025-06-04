@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detalhes do Restaurante</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+</head>
+
+<body>
+  <div id="container"></div>
+
+  <script>
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+
+    function getFavoritos() {
+      return JSON.parse(localStorage.getItem('restaurantesFavoritos') || '[]');
+    }
+
+    function setFavorito(nome) {
+      let favoritos = getFavoritos();
+      if (favoritos.includes(nome)) {
+        favoritos = favoritos.filter(item => item !== nome);
+      } else {
+        favoritos.push(nome);
+      }
+      localStorage.setItem('restaurantesFavoritos', JSON.stringify(favoritos));
+    }
+
+    function isFavoritado(nome) {
+      return getFavoritos().includes(nome);
+    }
+
+    async function carregarRestaurantes() {
+      const id = getQueryParam('id');
+      let grupo = getQueryParam('grupo') || 'grupo1'; // pega grupo da URL ou usa 'grupo1' como padrão
+
+      const response = await fetch('restaurantes.json');
+
+      const data = await response.json();
+
+      const container = document.getElementById('container');
+      container.innerHTML = '';
+
+      if (!data[grupo]) {
+        container.innerHTML = `<p>Grupo inválido ou não encontrado.</p>`;
+        return;
+      }
+
+      const restaurante = data[grupo].find(r => r.id === id);
+
+      if (restaurante) {
+        const favoritado = isFavoritado(restaurante.nome);
+        const mapaId = 'mapa-restaurante';
+
+        // Correção aqui: pratos famosos vêm da propriedade 'famosos'
+        const pratosFamosos = restaurante.famosos || [];
+        const pratosFamososHTML = pratosFamosos.length
+          ? `<h3>Pratos Mais Famosos</h3><ul>${pratosFamosos.map(p => `<li>${p}</li>`).join('')}</ul>`
+          : '';
+
+        container.innerHTML = `
+          <section>
+            <header>
+              <img src="${restaurante.imagem}" alt="Imagem do restaurante ${restaurante.nome}" />
+              <h1>${restaurante.nome}</h1>
+            </header>
+            <div class="content">
+              <h3>Sobre o Restaurante</h3>
+              <p>${restaurante.descricao}</p>
+              <h3>Pratos Principais</h3>
+              <ul>${restaurante.pratos.map(p => `<li>${p}</li>`).join('')}</ul>
+              ${pratosFamososHTML}
+              <h3>Horário de Funcionamento</h3>
+              <p>${restaurante.horario}</p>
+              <h3>Faixa de Preço</h3>
+              <p>${restaurante.preco}</p>
+              <h3>Contato</h3>
+              <p>Telefone: ${restaurante.telefone} <br>Email: ${restaurante.email}</p>
+              <div class="map-container">
+                <h3>Localização</h3>
+                <div id="${mapaId}" class="map"></div>
+              </div>
+              <button class="favorite-btn ${favoritado ? 'favorited' : ''}" data-nome="${restaurante.nome}">
+                <span class="star">${favoritado ? '★' : '☆'}</span> Favoritar
+              </button>
+              <br />
+              <a href="cardapio.html?id=${restaurante.id}&grupo=${grupo}" class="button">Ver Cardápio</a>
+            </div>
+          </section>
+          <a href="../index.html" class="btn-back">⬅ Voltar ao Início</a>
+        `;
+
+        const mapa = L.map(mapaId).setView([restaurante.coordenadas.lat, restaurante.coordenadas.lng], 15);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(mapa);
+        L.marker([restaurante.coordenadas.lat, restaurante.coordenadas.lng]).addTo(mapa)
+          .bindPopup(`<b>${restaurante.nome}</b>`).openPopup();
+        mapa.invalidateSize();
+
+        document.querySelector('.favorite-btn').addEventListener('click', function () {
+          const nome = this.dataset.nome;
+          setFavorito(nome);
+          this.classList.toggle('favorited');
+          this.querySelector('.star').textContent = this.classList.contains('favorited') ? '★' : '☆';
+        });
+      } else {
+        container.innerHTML = `<p>Restaurante não encontrado.</p>`;
+      }
+    }
+
+    carregarRestaurantes();
+  </script>
+</body>
+</html>

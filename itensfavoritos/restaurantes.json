@@ -1,0 +1,57 @@
+{
+  "grupo1": [
+    {
+      "id": "genarro",
+      "nome": "Genarro Ristorante",
+      "imagem": "img/genarro.jpg",
+      "descricao": "O Genarro Ristorante oferece uma autêntica experiência da culinária italiana no coração de Belo Horizonte. Com pratos clássicos preparados com ingredientes frescos e um ambiente acolhedor, é o destino ideal para quem busca sabor e sofisticação.",
+      "pratos": [
+        "Risoto de Funghi",
+        "Spaghetti alla Carbonara",
+        "Lasanha à Bolonhesa",
+        "Fettuccine Alfredo"
+      ],
+      "famosos": [
+        "Pizza Genarro (massa fina e crocante com presunto cru e rúcula)",
+        "Tiramisu da Casa"
+      ],
+      "horario": "Segunda a Sábado: 12h às 23h | Domingo: 12h às 18h",
+      "preco": "R$50 - R$120",
+      "telefone": "(31) 3322-4567",
+      "email": "contato@genarroristorante.com.br",
+      "coordenadas": {
+        "lat": -19.9333,
+        "lng": -43.9408
+      },
+      "cardapio_url": "https://genarroristorante.com.br/cardapio.pdf"
+    },
+    {
+      "id": "pomodori",
+      "nome": "Pomodori Trattoria",
+      "imagem": "img/pomodori.jpg",
+      "descricao": "Pomodori Trattoria traz a verdadeira cozinha italiana com um toque contemporâneo em Belo Horizonte. Um ambiente elegante com sabores que encantam desde o antipasto até a sobremesa.",
+      "pratos": [
+        "Gnocchi ao molho pesto",
+        "Tagliatelle al ragù",
+        "Polpetone recheado",
+        "Risoto de camarão"
+      ],
+      "famosos": [
+        "Bruschetta Pomodori",
+        "Panna Cotta com calda de frutas vermelhas"
+      ],
+      "horario": "Terça a Domingo: 12h às 22h",
+      "preco": "R$60 - R$130",
+      "telefone": "(31) 3333-7890",
+      "email": "contato@pomodoritratttoria.com.br",
+      "coordenadas": {
+        "lat": -19.9280,
+        "lng": -43.9395
+      },
+      "cardapio_url": "https://pomodoritratttoria.com.br/cardapio.pdf"
+    }
+  ],
+  "grupo2": [],
+  "grupo3": [],
+  "grupo4": []
+}
