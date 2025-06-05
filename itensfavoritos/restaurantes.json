@@ -4,7 +4,7 @@
       "id": "genarro",
       "nome": "Genarro Ristorante",
       "imagem": "img/genarro.jpg",
-      "descricao": "O Genarro Ristorante oferece uma autêntica experiência da culinária italiana no coração de Belo Horizonte. Com pratos clássicos preparados com ingredientes frescos e um ambiente acolhedor, é o destino ideal para quem busca sabor e sofisticação.",
+      "descricao": "O Genarro Ristorante oferece uma autêntica experiência da culinária italiana no coração de Belo Horizonte. Com pratos clássicos preparados com ingredientes frescos e selecionados, o restaurante proporciona um ambiente acolhedor e sofisticado, ideal para encontros familiares, jantares românticos ou celebrações especiais. A dedicação à tradição italiana é refletida em cada prato, do risoto ao famoso tiramisu, que conquistam o paladar dos clientes mais exigentes.",
       "pratos": [
         "Risoto de Funghi",
         "Spaghetti alla Carbonara",
@@ -23,22 +23,23 @@
         "lat": -19.9333,
         "lng": -43.9408
       },
-      "cardapio_url": "https://genarroristorante.com.br/cardapio.pdf"
+      "cardapio_url": "https://www.tripadvisor.com.br/Restaurant_Review-g303374-d10134733-Reviews-Restaurante_Gennaro-Belo_Horizonte_State_of_Minas_Gerais.html&m=69573#/media/10134733/?albumid=-184&type=ALL_INCLUDING_RESTRICTED&category=-184",
+      "agendamento_url": "https://linktr.ee/restaurantegennaro?utm_source=linktree_profile_share&ltsid=8c066646-77c4-43c5-9712-386bbc9de3b0"
     },
     {
       "id": "pomodori",
-      "nome": "Pomodori Trattoria",
+      "nome": "Pomodori Pizza",
       "imagem": "img/pomodori.jpg",
-      "descricao": "Pomodori Trattoria traz a verdadeira cozinha italiana com um toque contemporâneo em Belo Horizonte. Um ambiente elegante com sabores que encantam desde o antipasto até a sobremesa.",
+      "descricao": "Pomodori Pizza é uma das principais pizzarias artesanais de Belo Horizonte, reconhecida pela qualidade excepcional de suas pizzas feitas com ingredientes frescos e massas preparadas diariamente. O ambiente é descontraído e moderno, perfeito para famílias, grupos de amigos e encontros informais. Além das pizzas tradicionais, a casa oferece opções exclusivas que combinam sabores regionais com a tradição italiana, proporcionando uma experiência gastronômica inesquecível para os amantes de pizza.",
       "pratos": [
-        "Gnocchi ao molho pesto",
-        "Tagliatelle al ragù",
-        "Polpetone recheado",
-        "Risoto de camarão"
+        "Pizza Margherita",
+        "Pizza Calabresa",
+        "Pizza Quatro Queijos",
+        "Pizza Portuguesa"
       ],
       "famosos": [
-        "Bruschetta Pomodori",
-        "Panna Cotta com calda de frutas vermelhas"
+        "Pizza de Mussarela com Manjericão",
+        "Pizza de Pepperoni"
       ],
       "horario": "Terça a Domingo: 12h às 22h",
       "preco": "R$60 - R$130",
@@ -48,7 +49,60 @@
         "lat": -19.9280,
         "lng": -43.9395
       },
-      "cardapio_url": "https://pomodoritratttoria.com.br/cardapio.pdf"
+      "cardapio_url": "https://pomodoripizzaria.com.br/produtos/",
+      "agendamento_url": "https://api.whatsapp.com/send/?phone=553132819299&text&type=phone_number&app_absent=0"
+    },
+    {
+      "id": "massa_fina",
+      "nome": "Massa Fina Ristorante",
+      "imagem": "img/massafina.jpg",
+      "descricao": "Localizado no coração de Belo Horizonte, o Massa Fina Ristorante é conhecido por suas massas frescas e molhos elaborados artesanalmente. Com um ambiente acolhedor e atendimento personalizado, é o lugar ideal para quem busca uma refeição italiana tradicional com toque contemporâneo, perfeita para almoços de negócios ou jantares românticos.",
+      "pratos": [
+        "Penne ao molho Alfredo",
+        "Ravioli de ricota e espinafre",
+        "Lasanha de berinjela",
+        "Tagliatelle ao molho de tomates frescos"
+      ],
+      "famosos": [
+        "Fettuccine ao molho quatro queijos",
+        "Nhoque da casa com ragu de carne"
+      ],
+      "horario": "Segunda a Sexta: 11h30 às 15h | Terça a Domingo: 18h às 23h",
+      "preco": "R$55 - R$110",
+      "telefone": "(31) 3555-6789",
+      "email": "contato@massafina.com.br",
+      "coordenadas": {
+        "lat": -19.9325,
+        "lng": -43.9423
+      },
+      "cardapio_url": "https://massafina.com.br/cardapio",
+      "agendamento_url": "https://massafina.com.br/reservas"
+    },
+    {
+      "id": "il_vicino",
+      "nome": "Il Vicino Massas",
+      "imagem": "img/ilvicino.jpg",
+      "descricao": "O Il Vicino Massas oferece uma experiência autêntica de culinária italiana em Belo Horizonte, com foco em pratos tradicionais de massas caseiras e molhos frescos. O restaurante possui um ambiente agradável e familiar, ideal para quem deseja saborear receitas clássicas e saborosas em um espaço aconchegante e com atendimento dedicado.",
+      "pratos": [
+        "Spaghetti ao sugo",
+        "Lasanha à bolonhesa",
+        "Pappardelle ao ragu de linguiça",
+        "Gnocchi ao molho de tomate fresco"
+      ],
+      "famosos": [
+        "Ravioli recheado com queijo e espinafre",
+        "Fettuccine com molho pesto"
+      ],
+      "horario": "Terça a Domingo: 12h às 22h",
+      "preco": "R$50 - R$120",
+      "telefone": "(31) 3444-5678",
+      "email": "contato@ilvicino.com.br",
+      "coordenadas": {
+        "lat": -19.9295,
+        "lng": -43.9400
+      },
+      "cardapio_url": "https://ilvicino.com.br/cardapio",
+      "agendamento_url": "https://ilvicino.com.br/reservas"
     }
   ],
   "grupo2": [],

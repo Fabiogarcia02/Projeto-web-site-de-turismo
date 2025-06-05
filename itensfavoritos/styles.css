@@ -191,28 +191,45 @@ header h1 {
   color: var(--color-star-inactive);
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 2.2rem;
-    bottom: 16px;
-    left: 16px;
-    padding: 12px 28px;
+/* BUTTON GROUP (CARDÁPIO + AGENDAMENTO) */
+.button-group {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 36px;
+}
+
+.btn-action {
+  display: inline-block;
+  padding: 14px 32px;
+  background-color: var(--color-highlight);
+  color: var(--color-accent);
+  font-weight: 600;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: background-color var(--transition), transform var(--transition), box-shadow var(--transition);
+  border: 1.5px solid var(--color-accent);
+  box-shadow: var(--shadow);
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  text-align: center;
+  user-select: none;
+}
+
+.btn-action:hover {
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(245, 222, 179, 0.6);
+}
+
+@media (max-width: 600px) {
+  .button-group {
+    flex-direction: column;
+    align-items: stretch;
   }
 
-  .content {
-    margin: 24px 16px;
-    padding: 32px 24px;
-  }
-
-  .btn-back {
-    margin-left: 24px;
-    padding: 14px 28px;
-    font-size: 1rem;
-  }
-
-  .favorite-btn {
-    font-size: 0.95rem;
-    padding: 10px 22px;
+  .btn-action {
+    width: 100%;
   }
 }
